@@ -1,3 +1,6 @@
+require 'bundler/setup'
+Bundler.require(:default)
+
 require 'set'
 require 'pstore'
 
@@ -8,5 +11,6 @@ module Smolsrv
   FORWARDEMAIL_API_TOKEN = ENV.fetch('FORWARDEMAIL_API_TOKEN')
 end
 
+require_relative './smolsrv/log'
 require_relative './smolsrv/store'
 require_relative './smolsrv/app'
