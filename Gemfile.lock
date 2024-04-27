@@ -1,0 +1,77 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    base64 (0.2.0)
+    bigdecimal (3.1.7)
+    date (3.3.4)
+    faraday (2.9.0)
+      faraday-net_http (>= 2.0, < 3.2)
+    faraday-net_http (3.1.0)
+      net-http
+    mail (2.8.1)
+      mini_mime (>= 0.1.1)
+      net-imap
+      net-pop
+      net-smtp
+    mini_mime (1.1.5)
+    mini_portile2 (2.8.6)
+    mustermann (3.0.0)
+      ruby2_keywords (~> 0.0.1)
+    net-http (0.4.1)
+      uri
+    net-imap (0.4.10)
+      date
+      net-protocol
+    net-pop (0.1.2)
+      net-protocol
+    net-protocol (0.2.2)
+      timeout
+    net-smtp (0.5.0)
+      net-protocol
+    nio4r (2.7.1)
+    puma (6.4.2)
+      nio4r (~> 2.0)
+    rack (3.0.10)
+    rack-contrib (2.4.0)
+      rack (< 4)
+    rack-protection (4.0.0)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.0.0)
+      rack (>= 3.0.0)
+    rackup (2.1.0)
+      rack (>= 3)
+      webrick (~> 1.8)
+    ruby2_keywords (0.0.5)
+    sequel (5.79.0)
+      bigdecimal
+    sinatra (4.0.0)
+      mustermann (~> 3.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.0.0)
+      rack-session (>= 2.0.0, < 3)
+      tilt (~> 2.0)
+    sqlite3 (2.0.1)
+      mini_portile2 (~> 2.8.0)
+    sqlite3 (2.0.1-arm64-darwin)
+    tilt (2.3.0)
+    timeout (0.4.1)
+    uri (0.13.0)
+    webrick (1.8.1)
+
+PLATFORMS
+  arm64-darwin-22
+  ruby
+
+DEPENDENCIES
+  faraday
+  mail
+  puma
+  rack-contrib
+  rackup
+  sequel
+  sinatra
+  sqlite3
+
+BUNDLED WITH
+   2.5.9
