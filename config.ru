@@ -1,3 +1,7 @@
-require './app'
 
-run Smolsrv.new
+require 'bundler/setup'
+Bundler.require(:default)
+
+require './lib/smolsrv'
+
+run Smolsrv::App.new
