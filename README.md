@@ -1,17 +1,17 @@
 1. from: somebody@example.com
-   to: vendors@keenfamily.us
+   to: list@example.net
    id: <abc@gmail.com>
 
    received: {
      <abc@gmail.com> => somebody@example.com
    }
 
-2. from: vendors@keenfamily.us
-   to: peter.keen@gmail.com
+2. from: list@example.net
+   to: pete@example.org
    id: <def@smol.keenfamily.us>
 
-   from: vendors@keenfamily.us
-   to: eni889@gmail.com
+   from: list@example.net
+   to: fred@example.org
    id: <ghi@smol.keenfamily.us>
 
    received: {
@@ -19,43 +19,43 @@
    }
 
    sent: {
-     <def@smol.keenfamily.us> => peter.keen@gmail.com, <abc@gmail.com>,
-     <ghi@smol.keenfamily.us> => eni889@gmail.com, <abc@gmail.com>
+     <def@smol.keenfamily.us> => pete@example.org, <abc@gmail.com>,
+     <ghi@smol.keenfamily.us> => fred@example.org, <abc@gmail.com>
    }
 
-3. from: peter.keen@gmail.com
-   to: vendors@keenfamily.us
+3. from: pete@example.org
+   to: list@example.net
    id: <jkl@gmail.com>
    in-reply-to: <def@smol.keenfamily.us>
 
    received: {
      <abc@gmail.com> => somebody@example.com,
-     <jkl@gmail.com> => peter.keen@gmail.com
+     <jkl@gmail.com> => pete@example.org
    }
 
    sent: {
-     <def@smol.keenfamily.us> => peter.keen@gmail.com, <abc@gmail.com>,
-     <ghi@smol.keenfamily.us> => eni889@gmail.com, <abc@gmail.com>
+     <def@smol.keenfamily.us> => pete@example.org, <abc@gmail.com>,
+     <ghi@smol.keenfamily.us> => fred@example.org, <abc@gmail.com>
    }
 
-4. from: vendors@keenfamily.us
-   to: eni889@gmail.com
+4. from: list@example.net
+   to: fred@example.org
    id: <mno@smol.keenfamily.us>
    in-reply-to: <ghi@smol.keenfamily.us>
 
-   from: vendors@keenfamily.us
+   from: list@example.net
    to: somebody@example.com
    id: <pqr@smol.keenfamily.us>
    in-reply-to: <abc@gmail.com>
 
    received: {
      <abc@gmail.com> => somebody@example.com,
-     <jkl@gmail.com> => peter.keen@gmail.com
+     <jkl@gmail.com> => pete@example.org
    }
 
    sent: {
-     <def@smol.keenfamily.us> => peter.keen@gmail.com, <abc@gmail.com>,
-     <ghi@smol.keenfamily.us> => eni889@gmail.com, <abc@gmail.com>
-     <mno@smol.keenfamily.us> => eni889@gmail.com, <ghi@smol.keenfamily.us>,
+     <def@smol.keenfamily.us> => pete@example.org, <abc@gmail.com>,
+     <ghi@smol.keenfamily.us> => fred@example.org, <abc@gmail.com>
+     <mno@smol.keenfamily.us> => fred@example.org, <ghi@smol.keenfamily.us>,
      <pqr@smol.keenfamily.us> => somebody@example.com, <abc@gmail.com>
    }
