@@ -90,7 +90,6 @@ class Smolsrv < Sinatra::Base
     # find original received message from InReplyTo header on this message
     # - find the sent message matching the InReplyTo
     # - find the received matching the sent's orig-message-id
-
     in_reply_to = find_received_reply(message)
 
     STDERR.puts(JSON.pretty_generate(in_reply_to))
