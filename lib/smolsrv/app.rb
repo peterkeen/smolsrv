@@ -92,7 +92,7 @@ module Smolsrv
       end
 
       if resp.success?
-        record_sent!(forward)
+        @store.record_sent!(forward)
       end
 
       ::Smolsrv::Log.info("send to=#{address} message_id=#{forward['messageId']} resp=#{resp.status}")
