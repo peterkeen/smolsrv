@@ -51,7 +51,7 @@ module Smolsrv
 
       candidate_recipients = Set.new(::Smolsrv::DISTRIBUTION_LIST)
 
-      if in_reply_to
+      if in_reply_to_msg
         candidate_recipients << in_reply_to_msg['from']['value'][0]['address']
       end
 
