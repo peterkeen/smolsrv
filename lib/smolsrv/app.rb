@@ -49,8 +49,6 @@ module Smolsrv
       # - find the received matching the sent's orig-message-id
       in_reply_to_msg = @store.find_original_received_from_in_reply_to(message)
 
-      ::Smolsrv::Log.debug(JSON.pretty_generate(in_reply_to))
-
       candidate_recipients = Set.new(::Smolsrv::DISTRIBUTION_LIST)
 
       if in_reply_to
