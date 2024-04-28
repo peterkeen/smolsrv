@@ -8,6 +8,16 @@ module Smolsrv
 
     set :reload_templates, false
 
+    before do
+      if request.params['_k'] != ::Smolsrv::WEBHOOK_KEY
+        halt 418, "🫖"
+      end
+    end
+
+    get '/' do
+      "yep"
+    end
+
     post '/api' do
       handle_incoming_message(request.params)
     end

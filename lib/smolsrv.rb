@@ -9,6 +9,7 @@ module Smolsrv
   MESSAGE_ID_DOMAIN = ENV.fetch('SMOLSRV_MESSAGE_ID_DOMAIN').freeze
   DATA_PATH = ENV.fetch('SMOLSRV_DATA_PATH', '.')
   FORWARDEMAIL_API_TOKEN = ENV.fetch('FORWARDEMAIL_API_TOKEN')
+  WEBHOOK_KEY = ENV.fetch('SMOLSRV_WEBHOOK_KEY')
 end
 
 require_relative './smolsrv/log'
