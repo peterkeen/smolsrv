@@ -1,3 +1,6 @@
+Smolsrv is a silly little listsrv. The tiniest listsrv. Barely more than automatic bcc.
+
+```
 1. from: somebody@example.com
    to: list@example.net
    id: <abc@gmail.com>
@@ -8,25 +11,25 @@
 
 2. from: list@example.net
    to: pete@example.org
-   id: <def@smol.keenfamily.us>
+   id: <def@smol.example.net>
 
    from: list@example.net
    to: fred@example.org
-   id: <ghi@smol.keenfamily.us>
+   id: <ghi@smol.example.net>
 
    received: {
      <abc@gmail.com> => somebody@example.com
    }
 
    sent: {
-     <def@smol.keenfamily.us> => pete@example.org, <abc@gmail.com>,
-     <ghi@smol.keenfamily.us> => fred@example.org, <abc@gmail.com>
+     <def@smol.example.net> => pete@example.org, <abc@gmail.com>,
+     <ghi@smol.example.net> => fred@example.org, <abc@gmail.com>
    }
 
 3. from: pete@example.org
    to: list@example.net
    id: <jkl@gmail.com>
-   in-reply-to: <def@smol.keenfamily.us>
+   in-reply-to: <def@smol.example.net>
 
    received: {
      <abc@gmail.com> => somebody@example.com,
@@ -34,18 +37,18 @@
    }
 
    sent: {
-     <def@smol.keenfamily.us> => pete@example.org, <abc@gmail.com>,
-     <ghi@smol.keenfamily.us> => fred@example.org, <abc@gmail.com>
+     <def@smol.example.net> => pete@example.org, <abc@gmail.com>,
+     <ghi@smol.example.net> => fred@example.org, <abc@gmail.com>
    }
 
 4. from: list@example.net
    to: fred@example.org
-   id: <mno@smol.keenfamily.us>
-   in-reply-to: <ghi@smol.keenfamily.us>
+   id: <mno@smol.example.net>
+   in-reply-to: <ghi@smol.example.net>
 
    from: list@example.net
    to: somebody@example.com
-   id: <pqr@smol.keenfamily.us>
+   id: <pqr@smol.example.net>
    in-reply-to: <abc@gmail.com>
 
    received: {
@@ -54,8 +57,9 @@
    }
 
    sent: {
-     <def@smol.keenfamily.us> => pete@example.org, <abc@gmail.com>,
-     <ghi@smol.keenfamily.us> => fred@example.org, <abc@gmail.com>
-     <mno@smol.keenfamily.us> => fred@example.org, <ghi@smol.keenfamily.us>,
-     <pqr@smol.keenfamily.us> => somebody@example.com, <abc@gmail.com>
+     <def@smol.example.net> => pete@example.org, <abc@gmail.com>,
+     <ghi@smol.example.net> => fred@example.org, <abc@gmail.com>
+     <mno@smol.example.net> => fred@example.org, <ghi@smol.example.net>,
+     <pqr@smol.example.net> => somebody@example.com, <abc@gmail.com>
    }
+```
