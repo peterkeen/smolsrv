@@ -77,7 +77,7 @@ module Smolsrv
       message.slice(*copied_params).tap do |new_message|
         new_message['from'] = "#{from['name']} <#{from['address']}>"
         new_message['to'] = address
-        new_message['messageId'] = "<#{SecureRandom.uuid}@#{@message_id_domain}>"
+        new_message['messageId'] = "<#{SecureRandom.uuid}@#{::Smolsrv::MESSAGE_ID_DOMAIN}>"
         new_message['inReplyTo'] = @store.find_sent_in_reply_to(message, address)
         new_message['headers'] = {'X-Smolsrv-Orig-Message-Id' => message['messageId']}
       end
