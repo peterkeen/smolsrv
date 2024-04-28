@@ -64,7 +64,7 @@ module Smolsrv
   
     def record_sent!(message)
       @store.transaction do
-        @store[:sent] << strip_message(message)
+        @store[:sent] << strip_message(message, save_headers: true)
       end
     end
 
@@ -90,9 +90,15 @@ module Smolsrv
       ::Smolsrv::DISTRIBUTION_LIST.include?(address)
     end
 
-    def strip_message(message)
+    def strip_message(message, save_headers: false)
       message.dup.tap do |stripped|
-        ['raw', 'text', 'html', 'headers', 'textAsHtml', 'attachments'].each do |key|
+        fields = ['raw', 'text', 'html', 'textAsHtml', 'attachments']
+
+        unless save_headers
+          fields << 'headers'
+        end
+
+        fields.each do |key|
           stripped.delete(key)
         end
       end
